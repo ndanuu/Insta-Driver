@@ -54,6 +54,10 @@ const useStyles = makeStyles(theme => ({
 
     },
   },
+  toolbar:{
+    paddingTop:25,
+
+  },
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: drawerWidth,
@@ -70,7 +74,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const HomePage = () => {
+const HomePage = () => { 
     const classes = useStyles();
         const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -82,9 +86,9 @@ const HomePage = () => {
         <div>
           <div className={classes.toolbar} />
           <Divider />
-          <List style={{selected:'#fff'}}>
+          <List >
             {['Employer Profile', 'Onboard your Vehicles', 'Search &Hire Drivers', 'Inbox', 'Recruitment', 'My Organisations', 'Rate A Driver', 'My Subscription'].map((text, index) => (
-              <ListItem button key={text}>
+              <ListItem button key={text}style={{selected:'#fff'}}>
                 <ListItemIcon>{index % 2 === 0 ? <PersonIcon /> : <DriveEtaIcon /> }</ListItemIcon>
                 <ListItemText primary={text} />
               </ListItem>

@@ -219,9 +219,7 @@ const InboxView = () => {
 
   return (
     <div className={classes.root}>
-      <Divider style={{
-        width:'100%'
-      }}/>
+      
       <Grid container spacing={3}>
         <Grid item xs={4}>
           <Box justifyContent="center" display="flex">
